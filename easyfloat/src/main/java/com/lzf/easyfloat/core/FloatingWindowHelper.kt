@@ -89,6 +89,14 @@ internal class FloatingWindowHelper(val context: Context, var config: FloatConfi
                 x = config.locationPair.first
                 y = config.locationPair.second
             }
+
+            if (config.width != -1){
+                width = config.width
+            }
+
+            if (config.height != -1){
+                height = config.height
+            }
         }
     }
 

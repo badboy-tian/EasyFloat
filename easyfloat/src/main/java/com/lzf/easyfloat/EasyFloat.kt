@@ -216,6 +216,14 @@ class EasyFloat {
             config.offsetPair = Pair(offsetX, offsetY)
         }
 
+        fun setWidth(width: Int) = apply {
+            config.width = width
+        }
+
+        fun setHeight(height: Int) = apply {
+            config.height = height
+        }
+
         /**
          * 当layout大小变化后，整体view的位置的对齐方式
          * 比如，当设置为 Gravity.END 时，当view的宽度变小或者变大时，都将会以原有的右边对齐 <br/>

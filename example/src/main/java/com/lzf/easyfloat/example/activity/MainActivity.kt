@@ -101,14 +101,14 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     @SuppressLint("SetTextI18n")
     private fun showActivityFloat(tag: String) {
         EasyFloat.with(this)
-            .setSidePattern(SidePattern.RESULT_HORIZONTAL)
+            .setSidePattern(SidePattern.DEFAULT)
             .setImmersionStatusBar(true)
-            .setGravity(Gravity.END, 0, 10)
+            .setGravity(Gravity.CENTER)
             // 传入View，传入布局文件皆可，如：MyCustomView(this)、R.layout.float_custom
-            .setLayout(MyCustomView(this)) {
-                it.findViewById<TextView>(R.id.textView).setOnClickListener { toast() }
-            }
+            .setLayout(R.layout.layout_menu)
             .setTag(TAG_1)
+            .setWidth(880)
+            .setHeight(880)
             .registerCallback {
                 // 在此处设置view也可以，建议在setLayout进行view操作
                 createResult { isCreated, msg, _ ->
